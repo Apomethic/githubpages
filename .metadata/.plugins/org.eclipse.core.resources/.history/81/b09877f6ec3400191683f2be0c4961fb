@@ -1,0 +1,19 @@
+
+class Product {
+	int id; 
+	String prodName; 
+	Product[] prodStock;
+	int prodCounter = 5;
+	
+	Product(int id, String prodName){
+		this.id = id; 
+		this.prodName = prodName;
+		this.prodStock = new prodStock[5];
+	}
+	
+	void viewState(){
+		System.out.println("Name: "this.prodName);
+		System.out.println("ID: "this.id);
+		System.out.println("Stock")
+	}
+}

@@ -1,0 +1,22 @@
+
+class Product {
+	int prodid; 
+	String prodname; 
+	Product[] prodstock;
+	int prodcounter;
+	final static int MAX_PROD = 5;
+	
+	Product(int prodid, String prodname){
+		this.prodid = prodid; 
+		this.prodname = prodname;
+		this.prodstock = new Product[5];
+	}
+	
+	void viewState(){
+		System.out.println("Name: "+this.prodname);
+		System.out.println("ID: "+this.prodid);
+		System.out.println("Stock: "+this.prodcounter);
+	}
+	
+	
+}

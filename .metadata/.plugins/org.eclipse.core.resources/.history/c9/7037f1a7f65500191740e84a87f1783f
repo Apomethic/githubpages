@@ -1,0 +1,59 @@
+package coc;
+import java.util.Random;
+/*
+	Item #1: Make this class implement the Runnable Interface
+*/
+public class Builder {
+	private int id;
+	private int strength;
+	private Building currentBuilding;
+	private static int builderPopulation;
+
+	public Builder(){
+		/*
+			Item #2: Initialize the attributes of a builder instance (see above attributes)
+		*/
+		getId();
+		getStrength();
+		
+	}
+
+	/*
+	*	When a builder builds, it calls the setCurrentBlocks(Builder) method of the building
+	*/
+	private void build(){		
+		this.currentBuilding.setCurrentBlocks(this);
+	}
+
+	int getId(){
+		return this.id;
+	}
+
+	int getStrength(){
+		return this.strength;
+	}
+
+	public void run(){
+		Random rand = new Random();
+		
+		/*
+			Items #3-#5: 
+					#3: While the building is not yet completed:
+					#4: Make this builder build()
+					#5: then sleep for a random time between 1-5 seconds (inclusive)
+		*/
+		while(                     ){
+			
+		}
+	}
+
+	void setCurrentBuilding(Building building){
+		this.currentBuilding = building;
+	}
+
+	public String toString(){
+		return "{\n\t'id': " + this.id + "\n"
+		+ "\t'strength': " + this.strength + "\n}";
+	}
+	
+}

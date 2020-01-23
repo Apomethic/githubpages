@@ -1,0 +1,43 @@
+package inventory;
+
+public class Customer {
+	int cID;
+	String name;
+	String address;
+	String mobNum;
+	int rewards;
+	int prodCounter;
+	Product[] products;
+	Store store;
+	
+	Customer(int cID, String name, String address, String mobNum, int rewards){
+		this.cID = cID;
+		this.name = name;
+		this.address = address;
+		this.mobNum = mobNum;
+		this.rewards = 0;
+		this.products = new Product[50];
+	}
+	
+	void viewState(){
+		System.out.println("==========CUSTOMER STATE==========\n");
+		System.out.println("Customer ID: " + this.cID );
+		System.out.println("Name: " + this.name);
+		System.out.println("Mobile No.: " + this.mobNum);
+		System.out.println("Reward points: " + this.rewards);
+		if(prodCounter == 0){
+			System.out.println("Product list is empty!\n");
+		}else{
+			for(int i=0; i<prodCounter; i++){
+				System.out.println("Product name: " + products[i].name);
+			}
+		}
+	}
+	
+	void buy(Product p, Store s){
+		System.out.println("Customer " + this.name + "is trying to buy " + p.name + "from" + s.name + ".\n");
+	}
+	
+	
+	
+}

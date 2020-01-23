@@ -1,0 +1,28 @@
+package example6template;
+
+public class Element extends Sprite{
+	private String name;
+	
+	public final static String FLAG_IMAGE = "images/flag.png";
+	public final static String BOMB_IMAGE = "images/bomb.gif";
+	public final static String LAND_IMAGE = "images/land.png";
+	
+	public final static String FLAG_TYPE = "flag";
+	public final static String BOMB_TYPE = "bomb";
+	public final static String LAND_TYPE = "land";
+
+	public Element(double xPos, double yPos, String name) {
+		super(xPos,yPos);
+		this.name = name;
+		
+		//call the loadImage method depending on the object type
+	
+	}
+
+	//getter method
+	String getName(){
+		return this.name;
+	}
+
+	
+}

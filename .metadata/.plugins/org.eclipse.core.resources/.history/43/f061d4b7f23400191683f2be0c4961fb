@@ -1,0 +1,21 @@
+
+class Store {
+	String name; 
+	Product[] prod; 
+	final static int MAX = 5; 
+	
+	Store(String name){
+		this.name = name; 
+		this.prod = new Product[50];
+	}
+	
+	void addProduct(int id, String name){
+		prod[i].prodcounter++;
+		if(int i=0;i<;i++){
+			prod[i].prodid = id;
+			prod[i].prodname = name; 
+			prod[i].prodcounter++;
+		}
+		System.out.println("Product added successfully!");
+	}
+}

@@ -1,0 +1,40 @@
+package sample2;
+
+
+class PocketHero {
+	String name;
+	String job;
+	int hp;
+	Weapon weapon;
+	
+	final static String SWORDSMAN = "Swordsman";
+	final static String MAGE = "Mage";
+	final static String THIEF = "Thief";
+	
+	PocketHero(String name, String job){
+		this.name = name;
+		this.job = job;
+		this.hp = 100;
+		
+	}
+	
+	void fight(PocketHero opponent){
+		opponent.hp -= 5;
+	}
+
+	void heal(){
+		this.hp += 10;
+	}
+	
+	void addWeapon(int type){
+		this.weapon = new Weapon(type);
+		
+	}
+
+	public void viewState() {
+		System.out.println("Name: "+this.name);
+		System.out.println("Job: "+this.job);
+		System.out.println("HP: "+this.hp);
+		
+	}
+}

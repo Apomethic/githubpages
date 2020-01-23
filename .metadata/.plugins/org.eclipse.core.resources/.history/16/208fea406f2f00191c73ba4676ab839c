@@ -1,0 +1,20 @@
+package mypackage;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Baby boss = new Baby("Baby Boss", "Male", 8.5f);
+		
+		System.out.println("Name: "+boss.name);
+		System.out.println("Sex: "+boss.sex);
+		System.out.println("Weight: "+boss.weight);
+		System.out.println("Hunger: "+boss.hungerLvl);
+		System.out.println("Stench: "+boss.stenchLvl);
+		System.out.println("Population: "+Baby.population);
+	}
+
+}

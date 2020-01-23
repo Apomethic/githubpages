@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;i&apos; from expression &apos;this.productCounter=productCounter&apos;&#x0A;- Original project: &apos;agustin.week05.abstraction&apos;&#x0A;- Variable name: &apos;i&apos;&#x0A;- Destination method: &apos;inventory.Store.Store()&apos;&#x0A;- Variable expression: &apos;this.productCounter=productCounter&apos;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;i&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;inventory{Store.java" name="i" replace="true" selection="227 36" stamp="1550567230806" version="1.0"/>
+</session>

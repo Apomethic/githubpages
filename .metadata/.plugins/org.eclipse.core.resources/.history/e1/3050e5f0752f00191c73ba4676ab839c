@@ -1,0 +1,26 @@
+package sample2;
+
+class PocketHero {
+	String name;
+	String job;
+	int hp;
+	
+	final static string SWORDSMAN = "Swordsman";
+	final static string MAGE = "Mage";
+	final static string THIEF = "Thief";
+	
+	PocketHero(String name, String job){
+		this.name = name;
+		this.job = job:
+		This.hp = hp;
+		
+	}
+	
+	void fight(PocketHero opponent){
+		opponent.hp -= 5;
+	}
+
+	void heal(){
+		THIS.HP += 10;
+	}
+}

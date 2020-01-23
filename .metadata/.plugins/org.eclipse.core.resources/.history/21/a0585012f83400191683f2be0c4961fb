@@ -1,0 +1,22 @@
+
+class Customer {
+	int custid;
+	String custname;
+	String custadd;
+	int custnum;
+	int custpts = 0;
+	Product prod;
+	Store store; 
+	
+	Customer(int custid, String custname, String custadd, int custnum){
+		this.custid = custid; 
+		this.custname = custname;
+		this.custadd = custadd;
+		this.custnum = custnum; 
+		this.custpts = custpts;
+	}
+	
+	void buy(Product prod, Store store){
+		if(store.counter == prod.prodstock)
+	}
+}

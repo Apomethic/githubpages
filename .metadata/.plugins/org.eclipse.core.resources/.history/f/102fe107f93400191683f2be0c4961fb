@@ -1,0 +1,15 @@
+
+class Store {
+	String name; 
+	Product[] prodlist;
+	int numOfProd = 50;
+	Store(String name){
+		this.name = name; 
+		this.prodlist = new Product[50];
+	}
+	
+	void addProduct(Product prod){
+		if()
+		System.out.println("Product "+prod.name+" added to the store "+this.name);
+	}
+}

@@ -1,0 +1,73 @@
+package example6template;
+
+import java.util.ArrayList;
+
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+
+public class GameStage {
+	private Scene scene;
+	private Stage stage;
+	/*Group layout/container is a component which applies no special 
+	layout to its children. All child components (nodes) are positioned at 0,0*/
+	private Group root;
+	private Canvas canvas;
+	private GraphicsContext gc;
+	private Element flag;
+	private Element land;
+	private ArrayList<ImgView> landcells;
+	public final static int WINDOW_WIDTH = 500;
+	public final static int WINDOW_HEIGHT = 500;
+	public static final int CELL_WIDTH = 0;
+	public static final int CELL_HEIGHT = 0;
+	public static final int MAP_NUM_ROWS = 3;
+	public static final int MAP_NUM_COLS = 3;
+	public final Image bg = new Image("images/background.jpg",500,500,false,false);
+	
+	
+	
+	public GameStage() {
+		this.root = new Group();
+		this.scene = new Scene(root, GameStage.WINDOW_WIDTH,GameStage.WINDOW_HEIGHT,Color.WHITE);	
+		this.canvas = new Canvas(GameStage.WINDOW_WIDTH,GameStage.WINDOW_HEIGHT);	
+		this.gc = canvas.getGraphicsContext2D();
+		this.flag = new Element(0,0,Element.FLAG_TYPE);
+		this.land = new Element(0,0,Element.LAND_TYPE);
+		this.landcells = new ArrayList<Element>();
+	}
+	public void createMap(){
+		for(int i=o;i<GameStage.MAP_NUM_ROWS;i++){
+			for(int j=0;j<GameStage.MAP_NUM_COLS;i++){
+				ImageView landImgView = new ImageView();
+				
+			}
+		}
+	}
+
+	//method to add the stage elements
+	public void setStage(Stage stage) {
+		this.stage = stage;
+		//draw the background to the canvas at location x=0, y=60
+		this.gc.drawImage( this.bg, 0, 70 );			
+		
+		ImageView flgImgView = new ImageView();
+		addToStage(this.flag.flgImgView);
+		//set stage elements here	
+		this.root.getChildren().add(canvas);
+		this.root.getChildren().add(flgImgView);
+		this.stage.setTitle("Modified Minesweeper Game");
+		this.stage.setScene(this.scene);
+		this.stage.show();
+	}
+	private void addToStage(Element elem, ImageView iv){
+		elem.render(iv);
+	}
+
+}
+

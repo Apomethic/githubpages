@@ -1,0 +1,30 @@
+
+class Product {
+	int prodid; 
+	String prodname; 
+	Product[] prodstock;
+	int prodcounter;
+	final static int MAX_PROD = 5;
+	
+	Product(int prodid, String prodname){
+		this.prodid = prodid; 
+		this.prodname = prodname;
+		this.prodstock = new Product[5];
+	}
+	
+	void viewState(){
+		System.out.println("Name: "+this.prodname);
+		System.out.println("ID: "+this.prodid);
+		System.out.println("Stock: "+this.prodcounter);
+	}
+	
+	void addProduct(int id, String name){
+		if(int i=0;i<this.MAX_PROD;i++){
+			//this.prodstock[prodcounter]
+			this.prodid = id;
+			this.prodname = name; 
+			this.prodcounter++;
+		}
+		System.out.println("Product added successfully!");
+	}
+}

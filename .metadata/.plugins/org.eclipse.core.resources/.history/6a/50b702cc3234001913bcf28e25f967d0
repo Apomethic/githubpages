@@ -1,0 +1,57 @@
+package inventory;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class Store {
+	
+	String name;
+	String sID;
+	Product[] product;
+	int counter;
+
+	Store(String name, String sID){
+		this.name = name;
+		this.sID = sID;
+		this.product = new Product[50];
+	}
+	
+	//adds product to the store given na wala pang 50 yung total no of products
+	void addProduct(Product p){
+		if(counter < 50){
+			System.out.println("The product has been successfully added!\n");
+			this.counter+=1;
+		}else{
+			System.out.println("The store has reached its maximum product inventory!!\n");
+		}
+	}
+	
+	
+	boolean findProduct(Product p){
+		for(int i=0; i<counter; i++){
+			if(p.name != p[i].name){
+				return false;
+			}else{
+				System.out.println("The product " + p.name + "is in the store" + this.name + ".\n");
+				return true;
+			}
+		}
+	}
+	
+	void viewState(){
+		System.out.println("==========STORE STATE==========\n");
+		System.out.println("Store name: " + this.name);
+		System.out.println("Store ID: " + this.sID);
+		System.out.println("Products: ");
+		if(counter == 0){
+			System.out.println("Product list is empty!!\n");
+		}else{
+			for(int i=0; i<counter; i++){
+				System.out.println("Product Name: " + product[i].name + "\n");
+			}
+		}
+		
+	}
+	
+	
+}

@@ -1,0 +1,26 @@
+package mypackage;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Baby boss = new Baby("Baby Boss", Baby.MALE, 8.5f);
+		Baby bong = new Baby("Poging pogi", Baby.MALE, 7.5f);
+		
+		//boss.viewState();
+		//System.out.println();
+		//bong.viewState();
+	
+		boss.eat();
+		boss.play(bong);
+		
+		boss.viewState();
+		System.out.println();
+		bong.viewState();
+	
+	}
+
+}

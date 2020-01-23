@@ -1,0 +1,12 @@
+
+class Product {
+	int id; 
+	String prodName; 
+	Product[] prodStock;
+	
+	Product(int id, String prodName){
+		this.id = id; 
+		this.prodName = prodName;
+		this.prodStock = new prodStock[5];
+	}
+}

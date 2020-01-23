@@ -1,0 +1,27 @@
+package inventory;
+
+public class Customer {
+	int cID;
+	String name;
+	String address;
+	String mobNum;
+	Customer[] products;
+	
+	Customer(int cID, String name, String address, String mobNum){
+		this.cID = cID;
+		this.name = name;
+		this.address = address;
+		this.mobNum = mobNum;
+	}
+	
+	void viewList(){
+		System.out.println("==========CUSTOMER STATE==========\n");
+		System.out.println("Customer ID:" + this.cID);
+		Syetem.out.println("Name:" + this.name );
+		
+		
+	}
+	
+	
+	
+}

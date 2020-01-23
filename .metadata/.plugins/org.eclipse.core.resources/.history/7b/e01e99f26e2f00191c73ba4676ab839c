@@ -1,0 +1,38 @@
+package mypackage;
+
+class Baby {
+	String name;
+	String sex;
+	float weight;
+	int hungerLvl;
+	int stenchLvl;
+	int numOfPoop;
+	static int population;
+	
+	Baby(){
+		this.hungerLvl = 50;
+		this.stenchLvl = 20;
+		Baby.population += 1;
+	}
+
+	void eat(){
+		this.hungerLvl -= 25;
+		this.stenchLvl += 10;
+		if(this.hungerLvl <= 0){
+			this.weight += 1;
+			this.hungerLvl = 0;
+		}
+	}
+	
+	void poop(){
+		this.hungerLvl += 10;
+		this.stenchLvl += 30;
+		this.numOfPoop += 1;
+	}
+	
+	void play(){
+		
+	}
+
+
+}

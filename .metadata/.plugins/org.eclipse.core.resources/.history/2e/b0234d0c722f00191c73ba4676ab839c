@@ -1,0 +1,61 @@
+package mypackage;
+
+class Baby {
+	String name;
+	String sex;
+	float weight;
+	int hungerLvl;
+	int stenchLvl;
+	int numOfPoop;
+	static int population;
+	
+	Baby[] playmates;
+	int playmatesCounter;
+	
+	final static String MALE = "Male";
+	final static String FEMALE = "Female";
+	
+	Baby(String name, String sex, float weight){
+		this.name = name;
+		this.sex = sex;
+		this.weight = weight;
+		this.hungerLvl = 50;
+		this.stenchLvl = 20;
+		Baby.population += 1;
+	}
+
+	void eat(){
+		System.out.println("Mother I'm hungry. ");
+		this.hungerLvl -= 25;
+		this.stenchLvl += 10;
+		if(this.hungerLvl <= 0){
+			this.weight += 1;
+			this.hungerLvl = 0;
+		}
+	}
+	
+	void poop(){
+		System.out.println("Pooping ....");
+		this.hungerLvl += 10;
+		this.stenchLvl += 30;
+		this.numOfPoop += 1;
+	}
+	
+	void play(Baby child){
+		System.out.println("Playing ");
+		this.hungerLvl += 20;
+		this.stenchLvl += 20;
+		child.hungerLvl += 20;
+		child.stenchLvl += 20;
+	}
+	
+	void viewState(){
+		System.out.println("Name: "+this.name);
+		System.out.println("Sex: "+this.sex);
+		System.out.println("Weight: "+this.weight);
+		System.out.println("Hunger: "+this.hungerLvl);
+		System.out.println("Stench: "+this.stenchLvl);
+		System.out.println("Population: "+Baby.population);
+	}
+
+}

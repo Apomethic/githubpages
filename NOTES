@@ -1,0 +1,68 @@
+// 69325e8
+// bc64206
+
+Github
+- a web-based version of Git
+- more of online repository
+
+Git 
+- a Version Control System (VCS)
+
+Repository
+Types:
+	- online/remote
+	- local
+
+sudo apt install git
+- command in terminal to install git (not sure if this is for any OS or just for Linux)
+
+* Github can be used w/o git and vice-versa
+* Main benefit of using Git is for collaborating
+
+Commands:
+git init
+
+touch filename.txt
+- creates a text file according to the file name of your choice
+
+echo "insert text here" >> filename.txt
+- puts text inside the text file
+- multiple use of this command does not overwrite the previous text written 
+
+git status
+- checks the status of git
+
+git config user.email
+- put your email here
+
+git config user.name
+- put your username here
+
+git add -A (-A is for all)
+- goes to staging area; ready to be committed
+
+git commit -m "Insert comment/text here" (-m is for comment/message)
+- command for commit
+- each commitment has its own hash
+
+git branch
+- checks which branch you are in currently
+
+git branch "insert name"
+- creates a new branch according to the name of your choice
+
+git checkout <hash>
+- for detaching written text/switching between branches
+
+* from master branch * git merge <anotherbranch>
+
+git remote add origin <remote url>
+- adds the remote url to origin
+
+git push origin <branch name>
+- pushes origin to a branch
+
+git clone
+- copies the files and branches
+
+

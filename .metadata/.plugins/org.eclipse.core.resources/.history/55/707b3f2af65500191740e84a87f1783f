@@ -1,0 +1,87 @@
+package user;
+
+import java.util.Scanner;
+import coc.*;
+
+import coc.Builder;
+import coc.Building;
+import coc.Clan;
+public class Main {
+	private static Scanner scan = new Scanner(System.in);
+
+	public static void main(String[] args){
+		Clan clan = new Clan("HashT5");
+
+		int choice = 0;
+		
+		do {
+			switch(choice = showMenu()) {
+				case 1: addBuilderMenu(clan);
+					break;
+				case 2: buildMenu(clan);
+					break;		
+				case 3: viewClan(clan);
+					break;					
+				case 0:
+					System.exit(0);
+					break;
+				default:
+					System.out.println("Invalid answer.");
+			}
+
+		}while(choice != 0);
+		
+	}
+
+	private static int showMenu() {
+		System.out.println("=====================================");
+		System.out.println(" COC DEMO                            ");
+		System.out.println("=====================================");
+		System.out.println("[1] Add Builder");
+		System.out.println("[2] Build");
+		System.out.println("[3] View Clan");
+		System.out.println("[0] Exit");
+		System.out.print("Choice [1-3]: ");
+		int choice = scan.nextInt();
+		scan.nextLine();
+		return choice;
+	}
+
+	private static void addBuilderMenu(Clan clan) {
+		
+		System.out.println("=====================================");
+		System.out.println(" > Add Builder                        ");
+		System.out.println("=====================================");
+		
+		Builder builder = new Builder();
+		clan.addBuilder(builder);
+	}
+
+	private static void buildMenu(Clan clan) {
+		if(clan.getBuilderCount()>0){
+			String type;
+			System.out.println("=====================================");
+			System.out.println(" > Build                             ");
+			System.out.println("=====================================");
+			
+			System.out.println("Building type:\n\t[1] Barracks");
+			System.out.println("\t[2] Gold Mine");
+			System.out.println("\t[3] Wizard Tower");
+			System.out.print("Choice [1-3]: ");
+			int typeChoice = scan.nextInt();					
+			scan.nextLine();
+
+			if(typeChoice == 1) type = Building.BARRACKS;
+			else if(typeChoice == 2) type = Building.GOLD_MINE;
+			else type = Building.WIZARD_TOWER;
+			
+			Building building = new Building(type);
+			clan.addBuilding(building);
+		}else System.out.println("No builders to build!");
+	}
+	
+	private static void viewClan(Clan clan) {
+		System.out.println("CLAN:\n" + clan.toString());
+	}
+	
+}

@@ -1,0 +1,14 @@
+
+class Customer {
+	int custid;
+	String custname;
+	String custadd;
+	int custnum;
+	int custpts = 0;
+	
+	Customer(int custid, String custname, String custadd, int custnum){
+		this.custid = custid; 
+		this.custname = custname
+		
+	}
+}

@@ -1,0 +1,10 @@
+
+class Store {
+	String name; 
+	Product[] prodlist; 
+	
+	Store(String name){
+		this.name = name; 
+		this.prodlist = new Product[50];
+	}
+}

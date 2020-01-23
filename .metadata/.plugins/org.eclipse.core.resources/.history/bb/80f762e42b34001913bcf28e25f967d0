@@ -1,0 +1,21 @@
+package inventory;
+
+public class Product {
+	int pID;
+	String name;
+	int stock;
+	
+	Product(int pID, String name, int stock){
+		this.pID = pID;
+		this.name =  name;
+		this.stock = 5;
+	}
+	
+	void viewState(){
+		System.out.println("==========PRODUCT STATE==========\n");
+		System.out.println("Product name: " + this.name);
+		System.out.println("Stocks: " + this.stock);
+		
+	}
+	
+}

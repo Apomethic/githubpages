@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;falzado.week10.concurrency&apos;" deleteContents="false" description="Delete resource &apos;falzado.week10.concurrency&apos;" element1="/falzado.week10.concurrency" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1554885254350"/>
+</session>

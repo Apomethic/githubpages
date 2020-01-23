@@ -1,0 +1,9 @@
+
+class Store {
+	String storeName; 
+	
+	Store(String name){
+		this.name = name; 
+		this.
+	}
+}

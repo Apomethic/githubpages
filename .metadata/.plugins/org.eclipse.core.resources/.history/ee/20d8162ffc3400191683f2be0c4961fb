@@ -1,0 +1,32 @@
+
+class Store {
+	String name; 
+	Product[] prodlist;
+	final static int MAX_NUM = 50;
+	int numOfProd = 0;
+	
+	Store(String name){
+		this.name = name; 
+		this.prodlist = new Product[50];
+	}
+	
+	void viewState(){
+		System.out.println("Name: "+this.name);
+		System.out.println("Products: "):
+		if(numOfProd>0){
+			for(int i=0; i<this.numOfProd;i++){
+				System.out.println("         "+prodlis[i].prodname);
+			}
+		}
+		
+	}
+	
+	void addProduct(Product prod){
+		if(this.numOfProd < this.MAX_NUM+1){
+			for(int i=0; i<prod.prodstock;i++){
+				this.numOfProd++;
+			}
+			System.out.println("Product "+prod.prodname+" added to the store "+this.name);
+		}
+	}
+}

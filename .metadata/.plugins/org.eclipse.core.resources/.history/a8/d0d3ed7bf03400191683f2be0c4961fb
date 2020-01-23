@@ -1,0 +1,29 @@
+
+class Product {
+	int prodid; 
+	String prodname; 
+	Product[] prodstock = new Product;
+	int prodcounter = 5;
+	
+	Product(int prodid, String prodname){
+		this.prodid = prodid; 
+		this.prodname = prodname;
+		this.prodstock = new prodstock[5];
+	}
+	
+	void viewState(){
+		System.out.println("Name: "this.prodname);
+		System.out.println("ID: "this.id);
+		System.out.println("Stock: "+this.prodcounter);
+	}
+	
+	void addProduct(int id, String name){
+		if(int i=0;i<this.prodcounter;i++){
+			this.prodstock[prodcounter]
+			this.id = id;
+			this.name = name; 
+			this.prodcounter++;
+		}
+		System.out.println("Product added successfully!")
+	}
+}

@@ -1,0 +1,34 @@
+
+class Customer {
+	int custid;
+	String custname;
+	String custadd;
+	int custnum;
+	int custpts;
+	Product prod;
+	Store store; 
+	
+	Customer(int custid, String custname, String custadd, int custnum){
+		this.custid = custid; 
+		this.custname = custname;
+		this.custadd = custadd;
+		this.custnum = custnum; 
+		this.custpts = 0;
+	}
+	
+	void viewState(){
+		System.out.println("Name: "+this.custname);
+		System.out.println("ID: "+this.custid);
+		System.out.println("Address: "+this.custadd);
+		System.out.println("Points: "+this.custpts);
+	}
+	
+	void buy(Product prod, Store store){
+		System.out.println("Customer "+this.name+" is trying to buy "+prod.prodname+" from "+store.name);
+		if(prod.prodname.equals(store.prodlist.prodname)){
+			
+			
+			
+		}
+	}
+}

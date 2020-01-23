@@ -1,0 +1,81 @@
+package coc;
+import java.util.Random;
+public class Building {
+	private int blocksNeeded;
+	private int blocksDone;
+	private String type;
+	private int cost;
+
+	public final static String BARRACKS = "Barracks";
+	public final static String GOLD_MINE = "Gold Mine";
+	public final static String WIZARD_TOWER = "Wizard Tower";
+
+	private final static int BARRACKS_COST = 10;
+	private final static int GOLD_MINE_COST = 15;
+	private final static int WIZARD_TOWER_COST = 20;
+	
+	public Building(String type){
+		/*
+			Item #6: Initialize the attributes of a building instance (see above attributes)
+		*/
+		getType();
+		getBlocks();
+		getBlocksDone();
+		
+	}
+	
+	int getBlocks(){
+		return this.blocksNeeded;
+	}
+
+	int getBlocksDone(){
+		return this.blocksDone;
+	}
+
+	String getType(){
+		return this.type;
+	}
+
+	/*
+		Item #7-#8: Complete this method to update this building's blocksDone
+	*/
+	void setCurrentBlocks(Builder builder){
+		if(!this.isCompleted()) {
+			System.out.println("\nBuilder "+builder.getId()+" is building the "+this.type+"...");
+			
+			/*
+				#8a: Update the building's blocksDone by the strength of the builder 
+					 (Note: blocksDone should not exceed blocksNeeded)
+				#8b: Display buider stats; display building stats
+			*/
+			
+
+			
+			try {
+				Thread.sleep(500);
+			}catch(InterruptedException e){
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+	
+	boolean isCompleted(){
+		if(this.blocksDone==this.blocksNeeded) return true;
+		else return false;
+	}
+	
+	int getCost(){
+		if(this.type.equals(Building.BARRACKS))
+			return Building.BARRACKS_COST;
+		else if(this.type.equals(Building.GOLD_MINE))
+			return Building.GOLD_MINE_COST;
+		else return Building.WIZARD_TOWER_COST;
+	}
+
+	public String toString(){
+		return "{\n\t'type': " + this.type + "\n"
+		+ "\t'blocksNeeded': " + this.blocksNeeded + "\n"
+		+ "\t'currentBlocks': " + this.blocksDone + "\n"
+		+ "\t'cost': " + this.cost + "\n}";
+	}
+}

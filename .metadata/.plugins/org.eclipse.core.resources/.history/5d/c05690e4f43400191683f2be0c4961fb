@@ -1,0 +1,49 @@
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Store s1 = new Store("Paponei");
+		Store s2 = new Store("Maces");
+		
+
+		Customer c1 = new Customer(1,"Jack","Bay, Laguna","09999972766");
+		Customer c2 = new Customer(2,"Jill ","Calamba, Laguna","09127112233");
+	
+		Product p1 = new Product(1,"Charger cable for android");
+		Product p2 = new Product(2,"Mongol Pencil");
+		Product p3 = new Product(3,"Uni Ballpen Black");
+		
+		
+		s1.addProduct(p1);
+		s1.addProduct(p2);
+		s1.addProduct(p3);
+
+		
+		c1.buy(p1,s1);		
+		c1.buy(p1,s1);
+		c1.buy(p1,s1);
+		c1.buy(p1,s1);		
+		c1.buy(p1,s1);
+		c1.buy(p1,s1);
+		c1.buy(p3,s1);
+		c1.buy(p2,s1);
+		c2.buy(p1,s2);
+		
+		s1.viewState();
+		s2.viewState();
+		
+		c1.viewState();
+		c2.viewState();
+		
+		p1.viewState();
+		p2.viewState();
+		p3.viewState();
+		
+	}
+
+}

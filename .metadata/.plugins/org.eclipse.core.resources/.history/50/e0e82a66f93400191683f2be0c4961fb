@@ -1,0 +1,16 @@
+
+class Store {
+	String name; 
+	Product[] prodlist;
+	final static int MAX_NUM = 50;
+	int numOfProd;
+	Store(String name){
+		this.name = name; 
+		this.prodlist = new Product[50];
+	}
+	
+	void addProduct(Product prod){
+		if()
+		System.out.println("Product "+prod.name+" added to the store "+this.name);
+	}
+}

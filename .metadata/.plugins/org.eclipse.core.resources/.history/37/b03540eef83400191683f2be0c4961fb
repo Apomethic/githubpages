@@ -1,0 +1,15 @@
+
+class Store {
+	String name; 
+	final static int MAX = 5; 
+	int counter = 0;
+	Product[] prod;
+	Store(String name){
+		this.name = name; 
+		this.prod = new Product[50];
+	}
+	
+	void addProduct(Product prod){
+		System.out.println("Product "+prod.name+" added to the store "+this.name);
+	}
+}

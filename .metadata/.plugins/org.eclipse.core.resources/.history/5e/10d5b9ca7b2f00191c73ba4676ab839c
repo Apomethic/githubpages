@@ -1,0 +1,23 @@
+package sample2;
+
+class Weapon {
+	String type;
+	int damage;
+	
+
+	final static String SWORD = "Sword";
+	final static String STAFF = "Staff";
+	final static String DAGGER = "Dagger";
+	
+	Weapon(){
+		this.type = type;
+		if(this.type.equals(Weapon.SWORD)){
+			this.damage = 5;
+		}else if(this.type.equals(Weapon.STAFF)){
+			this.damage = 3;
+			
+		}else if(this.type.equals(Weapon.DAGGER)){
+			this.damage = 7;
+		}
+	}
+}

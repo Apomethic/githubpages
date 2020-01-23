@@ -1,0 +1,77 @@
+package sample2;
+import java.util.Scanner;
+
+	class Main{
+
+		public static void main(String[] args){
+			int choice;
+			Scanner sc = new Scanner(System.in);
+			
+			//instantiate 2 pocket heroes, hero1 and opponent1 
+			PocketHero hero1 = new PocketHero("Erik", "Swordman");
+			PocketHero opponent1 = new PocketHero("Miles", "Thief");
+
+			do{
+				Main.printMenu();
+				System.out.print("Enter choice: ");
+				choice = sc.nextInt();
+				Main.executeChoice(choice,hero1,opponent1);
+
+			}while(choice!=0);
+		}//end of main method
+		
+		static void printMenu(){
+			System.out.println("\n\n==========POCKET HERO MENU==========");
+			System.out.println("[1] - Add a weapon to pocket hero");
+			System.out.println("[2] - View State of pocket hero");
+			System.out.println("[3] - Fight opponent!");			
+			System.out.println("[4] - Heal self!");			
+			System.out.println("[5] - View State of opponent");						
+			System.out.println("[0] - Exit");
+			System.out.println("====================================");
+			
+		}//end of printMenu
+		
+		static void executeChoice(int choice, PocketHero hero1, PocketHero opponent1){
+			Scanner sc = new Scanner(System.in);
+			switch(choice){
+					case 1: System.out.println("Add a weapon to a pocket hero");
+							System.out.println("\t[1] - Sword");
+							System.out.println("\t[2] - Staff");			
+							System.out.println("\t[3] - Dagger");			
+							System.out.print("\tChoose a weapon type: ");
+							int weaponType = sc.nextInt();
+							//call the add weapon method of hero1 depending on the weaponType chosen by the user
+							if(weaponType == 1){
+								hero1.addWeapon(Weapon.SWORD);
+							}else if(weaponType == 2){
+								hero1.addWeapon(Weapon.STAFF);
+							}else if(weaponType == 3){
+								hero1.addWeapon(Weapon.DAGGER);
+							}
+							break;
+					case 2: System.out.println("View State of pocket hero");
+							//call the view state method of hero1
+							hero1.viewState();
+							break;
+					case 3: System.out.println("FIGHT!");
+							//call the fight method of hero
+							hero1.fight(opponent1); 
+							break;
+					case 4: System.out.println("HEAL!");
+							//call the heal method of hero1
+							hero1.heal();  
+							break;
+					case 5: System.out.println("View State of Opponent");
+							// call the view state method of opponent1
+							opponent1.viewState(); 
+							break;
+					case 0: System.out.println("Bye!");
+							System.exit(1);
+					default: System.out.println("Invalid input. Try again.");
+				}
+				
+		}
+		
+	}
+
